@@ -25,17 +25,19 @@ label{
     top: 2px;
 
 }
-#button{
-    align-items: center;
+#btnsearch{
+    /* align-items: center;
     margin-left: 375px;
     width: 12vw;
     margin-bottom: 50px; 
     height: 5vh;
     border-radius: 15px;
-    padding-top: 10px;
+    padding-top: 10px; */
+    background-color:#0c003ac2;
+    border-color: rgba(90, 66, 90, 0.826);
 }
 main{
-    background-color:#e0e0e0;
+    background-color:#e3d9e86e;
 }
 /* .mainbanner{
    
@@ -45,14 +47,21 @@ main{
 #b1{
     /* border: 2px solid black;
     border-radius: 2%; */
+    width: 20vw;
+    padding: 5px;
+    height: 5vh;
+    margin-top: 5px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+}
+#b2{
     width: 16vw;
     padding: 5px;
     height: 5vh;
+}
 
-}
-header{
-    background-color: #cdc1ff;
-}
 .container{
     margin:0px;
+    padding-left:30px;
 }

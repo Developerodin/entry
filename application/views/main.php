@@ -5,13 +5,13 @@
 <main>
 
   <div class="relative">
-    <img src="assets/img/b1.png" alt="banner" width="100%">
+    <img src="assets/img/b1.png" alt="banner" width="100%" height="200px">
 
   </div>
 
   <div class="row pb-md-4 m-0" style="justify-content: center;">
 
-    <div class="col-md-8 mt-5">
+    <div class="col-md-8 mt-2">
       <form id="filterForm" method="post">
         <div class="row" style="    justify-content: space-around;">
           <div class="col-md-5 mt-3">
@@ -51,7 +51,19 @@
             </div>
           </div>
           <div class="col-md-5 mt-3">
-            <div class="inputs5  in">
+            <div class="inputs9  in">
+              <label for="State">State</label>
+              <input type="text" name="State" placeholder="eg:Himachal Pradesh" id="b1">
+            </div>
+          </div>
+          <div class="col-md-5 mt-3">
+            <div class="inputs10  in">
+              <label for="Area">Area</label>
+              <input type="text" name="Area" placeholder="eg: South Delhi " id="b1">
+            </div>
+          </div>
+          <div class="col-md-5 mt-3">
+            <div class="inputs11  in">
               <label for="industry">Select Industry</label>
               <select name="industry" id="b1">
                 <option value="select"> Select Industry</option>
@@ -61,7 +73,7 @@
             </div>
           </div>
           <div class="col-md-5 mt-3">
-            <div class="inputs6  in">
+            <div class="inputs12  in">
               <label for="city"> Select City</label>
               <select name="city" id="b1">
                 <option value="select">Select City</option>
@@ -97,8 +109,8 @@
           </div>
         </div>
 
-        <div class="col-md-12 text-center">
-          <button type="button" class="btn btn-success mt-5" name="submit" id="btnsearch">Submit</button>
+        <div class="col-md-10 text-center">
+          <button type="button" class="btn btn-success mt-5" name="submit" id="btnsearch">SEARCH</button>
         </div>
 
       </form>
@@ -124,11 +136,14 @@
     #dataTable{
       display:none;
     }
+    .container{
+      padding-left:30px;
+    }
   </style>
-<div class="container m-0" >
+<div class="container" >
   <div class="table">
     <table id="dataTable">
-      <thead>
+      <thead id="dataTableHead">
         <tr>
           <th>Company Name</th>
           <th>Owner's Name</th>
@@ -140,7 +155,7 @@
           <th>City</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="dataTableBody">
         <!-- Your table rows go here -->
       </tbody>
     </table>
@@ -203,8 +218,8 @@
 
   // Function to update the table with filtered data
   function updateTable(filteredData) {
-  // var tableBody = document.getElementById("dataTableBody");
-   var tableBody = document.getElementById("dataTable");
+   var tableBody = document.getElementById("dataTableHead");
+   var tableBody = document.getElementById("dataTableBody");
 
     // Clear existing table rows
     tableBody.innerHTML = '';

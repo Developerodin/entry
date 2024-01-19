@@ -48,14 +48,12 @@
     <!-- ======= Header ======= -->
     <!-- End Top Bar -->
 
-    <header id="header" class="header d-flex align-items-center addclass nav-down" style="   width:100%;">
+  <header id="header" class="header d-flex align-items-center addclass nav-down" style="   width:100%;">
 
         <div class="container-fluid container-xl d-flex align-items-center  row"
             style="max-width: 100%;margin: auto;">
             <a href="<?php echo base_url(); ?>" class="logo d-flex align-items-center col-md-4 justify-content-center">
-                <!-- 
-                <img src="assets/img/logo2.png" style="max-width:250px;" alt=""> -->
-                <h1 style="text-align: center;">Seacrh<span></span></h1>
+                <h1 style="text-align: center;">Seacrh</h1>
             </a>
             <nav id="navbar" class="navbar col-md-6 ">
 
@@ -71,15 +69,35 @@
 
                         </ul>
                     </li>
-                    <!-- <li><a href="<?php echo base_url(); ?>">News</a></li> -->
+                    
                     <li><a href="<?php echo base_url('Contact1'); ?>">Contact</a></li>
                     
-                </ul>
-            </nav><!-- .navbar -->
+                </ul> 
+            </nav>
+            <!-- .navbar -->
 
-            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+           <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
         </div>
-    </header><!-- End Header -->
+    </header> 
     <!-- End Header -->
+    <!-- End Header -->
+
+   <!-- <style>
+    .contariner{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        height:5vh;
+    }
+   </style>
+
+    <header>
+        <div class="container">
+            <a>SEARCH</a>
+            <a>Home</a>
+            <a>Search</a>
+            <a>Refresh</a>
+        </div>
+    </header> -->
