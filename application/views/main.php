@@ -17,49 +17,49 @@
           <div class="col-md-5 mt-3">
             <div class="inputs in">
               <label for="comapanyName">Comapany's Name</label>
-              <input type="text" name="company_name" placeholder="eg:Grand Paradise" id="b1">
+              <input type="text" name="company_name" placeholder="Grand Paradise" id="b1">
             </div>
           </div>
           <div class="col-md-5 mt-3">
             <div class="inputs2  in">
               <label for="OwnerName">Owner's Name</label>
-              <input type="text" name="owner_name" placeholder="eg:Khushal Paul" id="b1">
+              <input type="text" name="owner_name" placeholder="Khushal Paul" id="b1">
             </div>
           </div>
           <div class="col-md-5 mt-3">
             <div class="inputs3  in">
               <label for="contact">Contact No.</label>
-              <input type="text" name="contact_no" placeholder="eg:+91 7896542210 " id="b1">
+              <input type="text" name="contact_no" placeholder="+91 7896542210 " id="b1">
             </div>
           </div>
           <div class="col-md-5 mt-3">
             <div class="inputs4  in">
               <label for="email">Email</label>
-              <input type="text" name="email" placeholder="eg: khush18@gmail.com" id="b1">
+              <input type="text" name="email" placeholder=" khush18@gmail.com" id="b1">
             </div>
           </div>
           <div class="col-md-5 mt-3">
             <div class="inputs7  in">
               <label for="Pincode">Pincode</label>
-              <input type="text" name="pincode" placeholder="eg:304022" id="b1">
+              <input type="text" name="pincode" placeholder="304022" id="b1">
             </div>
           </div>
           <div class="col-md-5 mt-3">
             <div class="inputs8  in">
               <label for="address">Address</label>
-              <input type="text" name="address" placeholder="eg:15 street Vile Parle " id="b1">
+              <input type="text" name="address" placeholder="15 street Vile Parle " id="b1">
             </div>
           </div>
           <div class="col-md-5 mt-3">
             <div class="inputs9  in">
               <label for="State">State</label>
-              <input type="text" name="State" placeholder="eg:Himachal Pradesh" id="b1">
+              <input type="text" name="State" placeholder="Himachal Pradesh" id="b1">
             </div>
           </div>
           <div class="col-md-5 mt-3">
             <div class="inputs10  in">
               <label for="Area">Area</label>
-              <input type="text" name="Area" placeholder="eg: South Delhi " id="b1">
+              <input type="text" name="Area" placeholder=" South Delhi " id="b1">
             </div>
           </div>
           <div class="col-md-5 mt-3">
@@ -67,8 +67,11 @@
               <label for="industry">Select Industry</label>
               <select name="industry" id="b1">
                 <option value="select"> Select Industry</option>
-                <option value="Businessman">Businessman</option>
+                <option value="Event Management ">Event Management </option>
+                <option value="Event Planners & Organizers ">Event Planners & Organizers </option>
                 <option value="Jewellers">Jewellers</option>
+                <option value="Services-Event Services ">Services-Event Services </option>
+                
               </select>
             </div>
           </div>
@@ -86,7 +89,7 @@
                 <option value="Dehli">Dehli</option>
                 <option value="Dungapur">Dungapur</option>
                 <option value="Faridabad">Faridabad</option>
-                <option value="Gaziabad">Gaziabad</option>
+                <option value="Ghaziabad">Ghaziabad</option>
                 <option value="Greater Noida">Greater Noida</option>
                 <option value="Gurgaon">Gurgaon</option>
                 <option value="Jaipur">Jaipur</option>
@@ -140,6 +143,7 @@
       padding-left:30px;
     }
   </style>
+  
 <div class="container" >
   <div class="table">
     <table id="dataTable">
@@ -156,18 +160,46 @@
         </tr>
       </thead>
       <tbody id="dataTableBody">
+
+      
         <!-- Your table rows go here -->
       </tbody>
+    
+      
     </table>
   </div>
-</div>
+
+  </div>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+			<script	src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+			<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+			<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+			<script	src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+			<script	src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+			<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+			<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+			<script	src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+			<script>
+				    		$(document).ready(function() {
+                               var table = $('#dataTable').DataTable( {
+                                  lengthChange: false,
+                                  buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
+                                   } );
+                        
+                                table.buttons().container()
+                               .appendTo( '#dataTable_wrapper .col-md-6:eq(0)' );
+                            } );
+			</script>
+	
 
 
 
 
 </main>
 
-<!-- In your PHP file where $all is defined -->
+<!-- In your PHP file where $all is defined -->a
 <script>
   var allData = <?php echo json_encode($all); ?>;
 
@@ -184,6 +216,8 @@
       var pincodeInput = document.getElementsByName("pincode")[0];
       var addressInput = document.getElementsByName("address")[0];
       var emailInput = document.getElementsByName("email")[0];
+      // var stateInput = document.getElementsByName("state")[0];
+      // var areaInput = document.getElementsByName("area")[0];
       var industrySelect = document.getElementsByName("industry")[0];
       var citySelect = document.getElementsByName("city")[0];
 
@@ -193,6 +227,8 @@
       var pincode = pincodeInput ? pincodeInput.value.toLowerCase() : '';
       var address = addressInput ? addressInput.value.toLowerCase() : '';
       var email = emailInput ? emailInput.value.toLowerCase() : '';
+      // var state = addressInput ? stateInput.value.toLowerCase() : '';
+      // var area = areaInput ? areaInput.value.toLowerCase() : '';
       var industry = industrySelect ? industrySelect.value.toLowerCase() : '';
       var city = citySelect ? citySelect.value.toLowerCase() : '';
 
@@ -206,6 +242,8 @@
           (pincode === '' || (item.Pincode || '').toLowerCase().includes(pincode)) &&
           (address === '' || (item.Address || '').toLowerCase().includes(address)) &&
           (email === '' || (item.Email || '').toLowerCase().includes(email)) &&
+          // (state === '' || (item.State || '').toLowerCase().includes(state)) &&
+          // (area === '' || (item.Area || '').toLowerCase().includes(address)) &&
           (industry === 'select' || (item.Industry || '').toLowerCase() === industry) &&
           (city === 'select' || (item.City || '').toLowerCase() === city)
         );
@@ -233,6 +271,8 @@
       row.insertCell(3).textContent = item.Email || 'Not defined';
       row.insertCell(4).textContent = item.Pincode || 'Not defined';
       row.insertCell(5).textContent = item.Address || 'Not defined';
+      // row.insertCell(6).textContent = item.State || 'Not defined';
+      // row.insertCell(7).textContent = item.Area || 'Not defined';
       row.insertCell(6).textContent = item.Industry || 'Not defined';
       row.insertCell(7).textContent = item.City || 'Not defined';
     });

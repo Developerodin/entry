@@ -39,17 +39,14 @@ label{
 main{
     background-color:#e3d9e86e;
 }
-/* .mainbanner{
-   
-    
-} */
 
-#b1{
+
+.b1{
     /* border: 2px solid black;
-    border-radius: 2%; */
-    width: 20vw;
-    padding: 5px;
-    height: 5vh;
+    border-radius: 2%; 
+    width: 25vw;*/
+    padding: 7px;
+    height: 7vh;
     margin-top: 5px;
     border: 2px solid transparent;
     border-radius: 10px;
@@ -62,6 +59,9 @@ main{
 }
 
 .container{
-    margin:0px;
-    padding-left:30px;
+    margin-left:110px;
+    
+}
+.table{
+    margin:0px
 }
