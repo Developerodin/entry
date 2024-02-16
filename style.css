@@ -41,25 +41,26 @@ main{
 }
 
 
-.b1{
-    /* border: 2px solid black;
-    border-radius: 2%; 
-    width: 25vw;*/
-    padding: 7px;
-    height: 7vh;
-    margin-top: 5px;
+
+#b1{
     border: 2px solid transparent;
     border-radius: 10px;
-
+    padding: 7px;
+    height: 7vh;
+    width: 25vw;
+    margin-top: 5px;
 }
-#b2{
-    width: 16vw;
-    padding: 5px;
-    height: 5vh;
+.b1{
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 7px;
+    height: 7vh;
+    width: 25vw;
+    margin-top: 5px;
 }
 
 .container{
-    margin-left:110px;
+    width:100%;
     
 }
 .table{

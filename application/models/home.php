@@ -25,7 +25,7 @@ class Home extends CI_Model {
 	 {
         
         $this->db->select('*');
-        $this->db->from('dataset');
+        $this->db->from('dataset1');
         $query = $this->db->get()->result();
 		return $query;
 		// redirect(current_url());
@@ -34,7 +34,7 @@ class Home extends CI_Model {
 	 {
         
         $this->db->select('*');
-        $this->db->from('dataset');
+        $this->db->from('dataset1');
 
         $query = $this->db->get()->result();
 		return $query;
