@@ -41,50 +41,45 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- ======= Header ======= -->
     <!-- End Top Bar -->
+    <style>
+    header {
+        background-color: #0c003ac2;
+    }
+    a{
+        color: aliceblue !important;
+        text-decoration: none!important ;
+    }
+    </style>
 
-  <header id="header" class="header d-flex align-items-center addclass nav-down" style="   width:100%;">
+    <header id="header" class="header d-flex align-items-center addclass nav-down" style="   width:100%;">
 
-        <div class="container-fluid container-xl d-flex align-items-center  row"
-            style="max-width: 100%;margin: auto;">
+        <div class="container-fluid container-xl d-flex align-items-center  row" style="max-width: 100%;margin: auto;">
             <a href="<?php echo base_url(); ?>" class="logo d-flex align-items-center col-md-4 justify-content-center">
                 <h1 style="text-align: center;">Seacrh</h1>
             </a>
             <nav id="navbar" class="navbar col-md-6 ">
+                <a href="<?php echo base_url(); ?>">Home</a>
+                <a href="<?php echo base_url(); ?>">About Us</a>
+                <a href="<?php echo base_url(); ?>">Contact Us</a>
+         </nav>
+                <!-- .navbar -->
 
-
-                <ul style="width: 100%;     justify-content: space-around;">
-                    <li><a href="<?php echo base_url(); ?>">Home</a></li>
-                    <li><a href="<?php echo base_url(); ?>">About</a></li>
-                    <li class="dropdown"><a href="#">Services <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="<?php echo base_url('Cpo'); ?>">Search</a></li>
-                            <li><a href="<?php echo base_url('OEMs'); ?>">Filter</a></li>
-
-
-                        </ul>
-                    </li>
-                    
-                    <li><a href="<?php echo base_url('Contact1'); ?>">Contact</a></li>
-                    
-                </ul> 
-            </nav>
-            <!-- .navbar -->
-
-           <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+                <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+                <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
         </div>
-    </header> 
+    </header>
     <!-- End Header -->
     <!-- End Header -->
 
-   <!-- <style>
+    <!-- <style>
     .contariner{
         display:flex;
         flex-direction:row;
